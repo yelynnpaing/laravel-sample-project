@@ -47,10 +47,10 @@
                             @endcan
                         @endauth
                         <div class="small mt-2">
-                            <b class="text-success">{{ $comment->user->name }} ... </b>
-                            {{ $comment->created_at->diffForHumans() }}
+                            <b class="text-success">{{ $comment->user->name }} </b>
                         </div>
                         {{$comment->content}}
+                        <small>( {{ $comment->created_at->diffForHumans() }} )</small>
                    </li>
                 @endforeach
             </ul>
